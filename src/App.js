@@ -8,6 +8,7 @@ import Flat from './Flat';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
 import './App.scss'
+import './new.scss'
 // Images
 import loanSvg from './img/money.svg'
 import researchSvg from './img/research.svg'
@@ -25,7 +26,7 @@ export default class App extends Component {
      <Route path="/404" component={NotFoundPage} />
      <Redirect to="/404" />
    </Switch>
-   <Footer></Footer>
+   <Footer/>
  </BRouter>
     )
   }
@@ -95,7 +96,12 @@ function Home() {
     </div>
     </div>
       </section>
+      <section className='new'>
+      <h1>New Flats</h1>
+      <div className='flats'>
       <New/>
+      </div>
+      </section>
     </>
   );
 }

@@ -25,18 +25,17 @@ export default class New extends Component {
       const {flats,islLoaded} = this.state;
       if(islLoaded){
         return (
-            <section className='new'>
-            <h1>New Flats</h1>
+            <>
             <div className='flats-group'>
             {flats.map(flat => <Flatitem key={flat.id} flat={flat}/>)}
             </div>
-            </section>  )   
+            </>  )   
                 }
         else{
-            return(<section className='new'>
-                <h1>New Flats</h1>
+            return(
+                <>
                 <div className="loader"></div>
-                        </section>
+                        </>
                     )
             }
         }
