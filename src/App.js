@@ -3,8 +3,10 @@ import {BrowserRouter as BRouter,Route,Switch,Redirect} from 'react-router-dom'
 import Nav from './Nav'
 import Footer from './Footer'
 import New from './New'
+import AllFlat from './AllFlats'
 import NotFoundPage from './NotFoundPage'
 import Flat from './Flat';
+import Contact from './Contact'
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
 import './App.scss'
@@ -21,6 +23,8 @@ export default class App extends Component {
      <Switch>
        <Route path='/' exact component={Home}/>
        <Route path='/property/:id' component={Flat}/>
+       <Route path='/property' component={AllFlat}/>
+       <Route path='/contact' component={Contact}/>
 
      <Route path="*" component={NotFoundPage} />
      <Route path="/404" component={NotFoundPage} />

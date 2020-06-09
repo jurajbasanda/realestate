@@ -17,6 +17,7 @@ export default class Flat extends Component {
    }
     componentDidMount(){
         window.scrollTo(0, 0);
+        axios.get("https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap")
         axios.get(`https://admin.jurajbasanda.com/wp-json/wp/v2/property/${this.props.match.params.id}`)
                 .then(res => this.setState({
                     flat:res.data,
@@ -53,6 +54,7 @@ export default class Flat extends Component {
                     <li><h3>ENERGY PERFORMANCE CERTIFICATES</h3></li>
                     <li><img src={flat.acf.energy.url} alt="" srcSet=""/></li>
                     </ul>
+                   
                     </div>
                 <div className='interested'>
                     <h3>Interested in this property?</h3>

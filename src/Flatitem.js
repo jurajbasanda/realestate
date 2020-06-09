@@ -47,8 +47,8 @@ export default class Flatitem extends Component {
     if(!isLoaded){
                 return(
                     <div className='flat-item'>
-                    <Link to={`/property/${id}`}>
-                    <img src={imgUrl} alt="" srcSet=""/>
+                    <Link to={`/property/${id}`} className='info-g'>
+                    <div className='img' style={{backgroundImage:`url(${imgUrl})`}}/>
                     <div className='title-info'>
                     <h2>{title}</h2>
                     <p>{bedroom} Bedroom Flat To Rent<br/>

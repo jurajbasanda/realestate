@@ -15,15 +15,15 @@ export default function Nav() {
       <div className='burger' data-aos="fade-down" onClick={openMenu}><i className="im im-menu"></i></div>
       <ul className='desktop' data-aos="fade-down">
       <li onClick={openMenu}><Link to='/'>Home</Link></li>
-      <li onClick={openMenu}><Link>Areas</Link></li>
-      <li onClick={openMenu}><Link>Tenants</Link></li>
+      <li onClick={openMenu}><Link to='/property'>To Rent</Link></li>
+      <li onClick={openMenu}><Link to='/areas'>Areas</Link></li>
       <li onClick={openMenu}><Link to='/contact'>Contact</Link></li>
       </ul>
     </nav>
     <ul className={Menu}>
-      <li onClick={openMenu}><Link to='/'>Home</Link></li>
-      <li onClick={openMenu}><Link>Areas</Link></li>
-      <li onClick={openMenu}><Link>Tenants</Link></li>
+    <li onClick={openMenu}><Link to='/'>Home</Link></li>
+      <li onClick={openMenu}><Link to='/property'>To Rent</Link></li>
+      <li onClick={openMenu}><Link to='/areas'>Areas</Link></li>
       <li onClick={openMenu}><Link to='/contact'>Contact</Link></li>
       </ul>
       </>

@@ -10,6 +10,9 @@ footer{
     display: grid;
     justify-content: space-evenly;
     align-items: center;
+    a{transition: all ease 0.6s;}
+    a:hover{color: $blue;
+        transition: all ease 0.6s;}
 }
 .social-networks{
     
@@ -36,6 +39,7 @@ footer{
 .copy{
     font-size: 0.8rem;
     margin-top: 5vh;
+    margin-bottom: 2vh;
     a{text-decoration: none;
         font-size: 0.8rem;
     color:$backColor;}

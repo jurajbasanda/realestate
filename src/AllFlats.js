@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import axios from 'axios'
 import Flatitem from './Flatitem'
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
 
 import './new.scss'
 
 
-export default class New extends Component {
+export default class AllFlats extends Component {
     constructor(){
         super()
     this.state = { 
@@ -13,7 +15,7 @@ export default class New extends Component {
             islLoaded:false
     }
 }
-    componentDidMount(){
+    componentDidMount(){AOS.init()
                         axios.get('https://admin.jurajbasanda.com/wp-json/wp/v2/property')
                         .then(res => this.setState({
                                         flats: res.data,
@@ -25,17 +27,15 @@ export default class New extends Component {
       const {flats,islLoaded} = this.state;
       if(islLoaded){
         return (
-            <>
+            <section className='AllFlats'>
             <div className='flats-group'>
-            {flats.map(flat => <Flatitem key={flat.id} flat={flat}/>)[0]}
-            {flats.map(flat => <Flatitem key={flat.id} flat={flat}/>)[1]}
-            {flats.map(flat => <Flatitem key={flat.id} flat={flat}/>)[2]}
+            {flats.map(flat => <Flatitem key={flat.id} flat={flat}/>)}
             </div>
-            </>  )   
+            </section>  )   
                 }
         else{
             return(
-                <div style={{width:'100%',height:'50vh',display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'center'}}>
+                <div style={{width:'100%',height:'100vh',display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'center'}}>
                 <div className="loader"></div>
                 </div>
                     )

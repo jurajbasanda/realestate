@@ -4,10 +4,14 @@ $grey:rgba(103, 103, 103, 1);
   font-family: 'Roboto';
   src: url('./fonts/Roboto/Roboto-Regular.ttf');
 }
+@font-face {
+  font-family: 'OpenSans';
+  src: url('./fonts/Open_Sans/OpenSans-Regular.ttf');
+}
 *{margin: 0;
   padding: 0;
   font-size: 1.1rem;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'OpenSans';
 }
 body{background-color: rgba(223, 223, 223, 1);}
 //--------Loader---------------------

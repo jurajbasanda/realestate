@@ -17,7 +17,7 @@ export default class Image extends Component {
             .catch(err=>console.log(err)) }
   render() {
     return (
-      <img src={this.state.urlImg} alt='flat' srcSet="" className='head-img'/>
+      <div style={{backgroundImage:`url(${this.state.urlImg})`}} className='head-img'/>
     );
   }
 }
