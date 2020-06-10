@@ -16,14 +16,12 @@ export default function Nav() {
       <ul className='desktop' data-aos="fade-down">
       <li onClick={openMenu}><Link to='/'>Home</Link></li>
       <li onClick={openMenu}><Link to='/property'>To Rent</Link></li>
-      <li onClick={openMenu}><Link to='/areas'>Areas</Link></li>
       <li onClick={openMenu}><Link to='/contact'>Contact</Link></li>
       </ul>
     </nav>
     <ul className={Menu}>
     <li onClick={openMenu}><Link to='/'>Home</Link></li>
       <li onClick={openMenu}><Link to='/property'>To Rent</Link></li>
-      <li onClick={openMenu}><Link to='/areas'>Areas</Link></li>
       <li onClick={openMenu}><Link to='/contact'>Contact</Link></li>
       </ul>
       </>

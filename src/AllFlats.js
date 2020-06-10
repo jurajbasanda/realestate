@@ -15,7 +15,8 @@ export default class AllFlats extends Component {
             islLoaded:false
     }
 }
-    componentDidMount(){AOS.init()
+    componentDidMount(){window.scrollTo(0,0)
+                        AOS.init()
                         axios.get('https://admin.jurajbasanda.com/wp-json/wp/v2/property')
                         .then(res => this.setState({
                                         flats: res.data,
