@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom'
 import PropTypes from 'prop-types'
-import axios from 'axios'
 import './new.scss'
 
 export default class Flatitem extends Component {
@@ -24,29 +23,23 @@ export default class Flatitem extends Component {
         flat: PropTypes.object.isRequired
     }
     componentDidMount(){
-        const {featured_media} = this.props.flat;
-        axios.get(`https://admin.jurajbasanda.com/wp-json/wp/v2/media/${featured_media}`)
-                                .then(img => {
-                                    this.setState(
-                                        {properties:{imgUrl:img.data.media_details.sizes.full.source_url, 
-                                                    price: this.props.flat.acf.price,
-                                                    bedroom: this.props.flat.acf.bedroom,
-                                                    bathroom: this.props.flat.acf.bathroom,
-                                                    content:this.props.flat.excerpt.rendered,
-                                                    id:this.props.flat.id,
-                                                    title: this.props.flat.title.rendered,
-                                                    }
-                                       }
-                                                )
-                                    })
-                                .catch(err=>console.log(err))    
+        this.setState(
+             {properties:{imgUrl:this.props.flat.acf.image,
+                        price: this.props.flat.acf.price,
+                        bedroom: this.props.flat.acf.bedroom,
+                        bathroom: this.props.flat.acf.bathroom,        
+                        id:this.props.flat.id,
+                        title: this.props.flat.acf.title,
+                        }
+                }
+                    )
                     }
   render() {
     const {id,title,price,bedroom,imgUrl} = this.state.properties;
     const {isLoaded} = this.state;
     if(!isLoaded){
                 return(
-                    <div className='flat-item'>
+                    <div key={id} className='flat-item'>
                     <Link to={`/property/${id}`} className='info-g'>
                     <div className='img' style={{backgroundImage:`url(${imgUrl})`}}/>
                     <div className='title-info'>

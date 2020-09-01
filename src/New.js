@@ -14,7 +14,7 @@ export default class New extends Component {
     }
 }
     componentDidMount(){
-                        axios.get('https://admin.jurajbasanda.com/wp-json/wp/v2/property')
+                        axios.get('https://admin.jurajbasanda.com/wp-json/acf/v3/property')
                         .then(res => this.setState({
                                         flats: res.data,
                                         islLoaded: true
