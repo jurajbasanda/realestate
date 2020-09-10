@@ -29,6 +29,7 @@ export default class App extends Component {
           <Route path="/" exact component={Home} />
           <Route path="/property/:id" component={Flat} />
           <Route path="/property" component={AllFlat} />
+          <Route path="/property/:id" component={AllFlat} />
           <Route path="/contact" component={Contact} />
 
           <Route path="*" component={NotFoundPage} />

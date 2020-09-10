@@ -16,7 +16,7 @@ export default class Flat extends Component {
    }
     componentDidMount(){
         window.scrollTo(0, 0);
-        axios.get(`https://admin.jurajbasanda.com/wp-json/acf/v3/property/${this.props.match.params.id}`)
+        axios.get(`https://admin.jurajbasanda.com/wp-json/wp/v2/property/${this.props.match.params.id}`)
                 .then(res => this.setState({
                     flat:res.data,
                     inLoaded:true,
