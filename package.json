@@ -2,7 +2,7 @@
   "name": "real-estate",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://admin.jurajbasanda.com",
+  "proxy": "https://admin.jurajbasanda.com/",
   "homepage": "https://eshop.jurajbasanda.com/",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",

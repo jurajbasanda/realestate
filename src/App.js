@@ -26,11 +26,10 @@ export default class App extends Component {
       <BRouter>
         <Nav></Nav>
         <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/property/:id" component={Flat} />
-          <Route path="/property" component={AllFlat} />
-          <Route path="/property/:id" component={AllFlat} />
-          <Route path="/contact" component={Contact} />
+        <Route path="/property/:id" component={Flat} />
+        <Route path="/property" component={AllFlat} />
+        <Route path="/contact" component={Contact} />
+        <Route path="/" exact component={Home} />
 
           <Route path="*" component={NotFoundPage} />
           <Route path="/404" component={NotFoundPage} />

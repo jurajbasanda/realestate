@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom'
-import PropTypes from 'prop-types'
 import './new.scss'
 
 export default class Flatitem extends Component {
@@ -19,9 +18,7 @@ export default class Flatitem extends Component {
             isLoaded: false,
         }
     }
-    static propTypes = {
-        flat: PropTypes.object.isRequired
-    }
+  
     componentDidMount(){
         this.setState(
              {properties:{imgUrl:this.props.flat.acf.image,
