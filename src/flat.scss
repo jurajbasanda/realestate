@@ -1,135 +1,173 @@
-$blue:#00a4d6;
-$grey:rgba(103, 103, 103, 1);
-$backColor:rgb(223, 223, 223);
+$blue: #00a4d6;
+$grey: rgba(103, 103, 103, 1);
+$backColor: rgb(223, 223, 223);
 //--------Loader---------------------
 .loader {
-    border: 16px solid #f3f3f3; /* Light grey */
-    border-top: 16px solid $blue; 
-    border-radius: 50%;
-    width: 120px;
-    height: 120px;
-    animation: spin 0.5s linear infinite;
-  }
-  
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
+	border: 16px solid #f3f3f3; /* Light grey */
+	border-top: 16px solid $blue;
+	border-radius: 50%;
+	width: 120px;
+	height: 120px;
+	animation: spin 0.5s linear infinite;
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
 //----------------Loader-----------------
-.flat{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    margin-left: 5vh;
-    margin-right: 5vh;
-    padding-top: 20vh;
-    height: 100%;
-   i{font-size: 1.3rem;}
-   h1{color: black;}
+.flat {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	margin-left: 5vh;
+	margin-right: 5vh;
+	padding-top: 20vh;
+	height: 100%;
+	i {
+		font-size: 1.3rem;
+	}
+	h1 {
+		color: black;
+	}
 }
-.head-img{display: flex;
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
-    margin-bottom: 1rem;
-            img{width: 100%;}
-        }
-.head-group{display: grid;
-            grid-template-columns: repeat(1,1fr);
-            grid-template-rows:1fr 1fr;
-            margin-top: 5vh;
-            color: rgb(223, 223, 223);
-        }
+.head-img {
+	display: flex;
+	justify-content: center;
+	justify-items: center;
+	align-items: center;
+	margin-bottom: 1rem;
+	img {
+		width: 100%;
+	}
+}
+.head-group {
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	grid-template-rows: 1fr 1fr;
+	margin-top: 5vh;
+	color: rgb(223, 223, 223);
+}
 
-.info{color: black;
-        background-color: $backColor;
-        table {
-            font-family: arial, sans-serif;
-            border-collapse: collapse;
-            width: 90%;
-                td, th {
-                        text-align: left;
-                        padding: 8px;}
-          
-                tr:nth-child(even) {
-                            background-color:#c5c5c5;}
-        }
-        }
-        
-.content{
-        max-width:95% ;
-        text-align: left;
-        h2{margin-bottom:1rem;}
-        }
-.gallery{
-    margin-top: 1rem;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 1rem;
-    img{width: 100%;}
-        }
+.info {
+	color: black;
+	background-color: $backColor;
+	table {
+		font-family: arial, sans-serif;
+		border-collapse: collapse;
+		width: 90%;
+		td,
+		th {
+			text-align: left;
+			padding: 8px;
+		}
+
+		tr:nth-child(even) {
+			background-color: #c5c5c5;
+		}
+	}
+}
+
+.content {
+	max-width: 95%;
+	text-align: left;
+	h2 {
+		margin-bottom: 1rem;
+	}
+}
+.gallery {
+	margin-top: 1rem;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-gap: 1rem;
+	img {
+		width: 100%;
+	}
+}
 //--------------------Make An Offer------------------------------------
-.interested{display: flex;
-            flex-direction: column;
-            padding: 1rem;
-            width: 17rem;
-            background-color: rgba(128, 128, 128, 0.274);
-            margin-bottom: 2vh;
-            margin-top: 2vh;
-            margin: 1rem;
-                .call-btn{color: $blue;
-                font-size: 1.3rem;
-                font-weight: bold;
-                margin-top: 2rem;
-                text-decoration: none;
-                        }
+.interested {
+	display: flex;
+	flex-direction: column;
+	padding: 1rem;
+	width: 17rem;
+	background-color: rgba(128, 128, 128, 0.274);
+	margin-bottom: 2vh;
+	margin-top: 2vh;
+	margin: 1rem;
+	.call-btn {
+		color: $blue;
+		font-size: 1.3rem;
+		font-weight: bold;
+		margin-top: 2rem;
+		text-decoration: none;
+	}
 }
-.more-info{display: grid;
-            grid-template-columns:1fr;
-            grid-template-rows: 1fr;
-             margin-top: 5vh;
-            text-align: center;
-            ul{list-style: none;}
+.more-info {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr;
+	margin-top: 5vh;
+	text-align: center;
+	ul {
+		list-style: none;
+	}
 }
-.offer-btn{justify-self: center;
-            align-self: center;
-            width: 50%;
-            padding:10px;
-            margin-top: 1rem;
-            color: $blue;
-            font-size: 1.3rem;
-            font-weight: bold;
-            text-decoration: none;
-            border:2px solid $blue
-            }
+.offer-btn {
+	justify-self: center;
+	align-self: center;
+	width: 50%;
+	padding: 10px;
+	margin-top: 1rem;
+	color: $blue;
+	font-size: 1.3rem;
+	font-weight: bold;
+	text-decoration: none;
+	border: 2px solid $blue;
+}
 //----------min-800px-------------------desktop---------------min-800px---------
-@media screen and (min-width:800px){
-.flat{margin-left: 20vh;
-        margin-right: 20vh;}
-       
-.head-group{display: grid;
-        justify-content: center;
-        grid-template-columns: repeat(2,1fr);
-        grid-template-rows: 1fr;
-    }
-.head-img{margin: 1rem;}
-.content{margin: 1;
-        width: 100%;}
-.gallery{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 1rem;
-    img{width: 100%;}
-}
+@media screen and (min-width: 800px) {
+	.flat {
+		margin-left: 20vh;
+		margin-right: 20vh;
+	}
 
-.more-info{display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-     margin-top: 5vh;
-     margin-bottom: 5vh;
-    text-align: center;
-    ul{list-style: none;}
-}
+	.head-group {
+		display: grid;
+		justify-content: center;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: 1fr;
+	}
+	.head-img {
+		margin: 1rem;
+	}
+	.content {
+		margin: 1;
+		width: 100%;
+	}
+	.gallery {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-gap: 1rem;
+		img {
+			width: 100%;
+		}
+	}
+
+	.more-info {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr;
+		margin-top: 5vh;
+		margin-bottom: 5vh;
+		text-align: center;
+		ul {
+			list-style: none;
+		}
+	}
 }
