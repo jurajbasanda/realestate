@@ -22,12 +22,12 @@ export default class Flatitem extends Component {
 	componentDidMount() {
 		this.setState({
 			properties: {
-				imgUrl: this.props.flat.acf.image,
-				price: this.props.flat.acf.price,
-				bedroom: this.props.flat.acf.bedroom,
-				bathroom: this.props.flat.acf.bathroom,
-				id: this.props.flat.id,
-				title: this.props.flat.acf.title,
+				imgUrl: this.props.flat?.acf?.image,
+				price: this.props.flat?.acf?.price,
+				bedroom: this.props.flat?.acf?.bedroom,
+				bathroom: this.props.flat?.acf?.bathroom,
+				id: this.props.flat?.id,
+				title: this.props.flat?.acf?.title,
 			},
 		})
 	}
