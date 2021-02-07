@@ -23,7 +23,7 @@ export default class AllFlats extends Component {
 			.get(`https://admin.jurajbasanda.com/wp-json/wp/v2/property`)
 			.then((res) => {
 				this.setState({
-					flats: res.data,
+					flats: res?.data,
 					islLoaded: true,
 				})
 			})
